@@ -1,4 +1,3 @@
-import imp
 from django.urls import path
 from . import views
 # file that connects route with view  (controller function)
