@@ -16,7 +16,8 @@ import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
@@ -87,12 +88,16 @@ WSGI_APPLICATION = 'ticket_trader.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_tickets',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'django_tickets',
+    #     'USER': '',
+    #     'PASSWORD': '',
+    #     'HOST': 'localhost'
+    # }
 }
 
 db_from_env = dj_database_url.config(conn_max_age=600)

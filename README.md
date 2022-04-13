@@ -13,7 +13,7 @@ Technology Used
     
 
 Frameworks & Libraries
-    -Django
+    -Django REST
 
 class Ticket(models.Model):
     name = models.CharField(max_length=32)
