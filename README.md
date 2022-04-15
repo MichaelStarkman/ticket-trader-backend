@@ -5,8 +5,8 @@ Ticket Trader app
 
 
 Hosted App Link
--back end link: 
--front end link 
+-back end link: https://ancient-woodland-14399.herokuapp.com/api/tickets/
+-front end link: https://ticket-trader.herokuapp.com/
 
 Technology Used
     - HTML, CSS, React
